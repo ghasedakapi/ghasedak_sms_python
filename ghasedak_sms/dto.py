@@ -87,7 +87,7 @@ class GetReceivedSmsPagingInput:
 class ReceivedSmsesPagingResponse:
     def __init__(self, index_from, page_index, page_size, total_count, total_pages, has_previous_page, has_next_page,
                  items):
-        self.index_from = index_from
+        # self.index_from = index_from
         self.page_index = page_index
         self.page_size = page_size
         self.total_count = total_count
@@ -183,18 +183,26 @@ class SendBulkInput:
 
 
 class SendBulkResponse:
-    def __init__(self, cost, line_number, receptors, message, status, send_date, status_description):
+    def __init__(self, cost, line_number, receptors, message,
+                 # status,
+                 send_date,
+                 # status_description
+                 ):
         self.cost = cost
         self.line_number = line_number
         self.receptors = receptors
         self.message = message
-        self.status = status
+        # self.status = status
         self.send_date = send_date
-        self.status_description = status_description
+        # self.status_description = status_description
 
     def __repr__(self):
         return (f"SendBulkResponse(cost={self.cost}, line_number={self.line_number}, receptors={self.receptors}, "
-                f"message={self.message}, status={self.status}, send_date={self.send_date}, status_description={self.status_description})")
+                f"message={self.message},"
+                # f" status={self.status}, "
+                f"send_date={self.send_date}, "
+                # f"status_description={self.status_description}"
+                f")")
 
     class ReceptionInfo:
         def __init__(self, receptor, message_id):
@@ -322,18 +330,21 @@ class SendOtpResponse:
             f"SendOtpResponse(line_number={self.line_number}, message_body={self.message_body}, items={self.items}, cost={self.cost})")
 
     class Data:
-        def __init__(self, receptor, cost, message_id, send_date, status, status_description):
+        def __init__(self, receptor, cost, message_id, send_date,
+                     # status, status_description
+                     ):
             self.receptor = receptor
             self.cost = cost
             self.message_id = message_id
             self.send_date = send_date
-            self.status = status
-            self.status_description = status_description
+            # self.status = status
+            # self.status_description = status_description
 
         def __repr__(self):
             return (
                 f"Data(receptor={self.receptor}, cost={self.cost}, message_id={self.message_id}, send_date={self.send_date}, "
-                f"status={self.status}, status_description={self.status_description})")
+                # f"status={self.status}, status_description={self.status_description}"
+                f")")
 
 
 class SendPairToPairInput:
@@ -381,37 +392,49 @@ class SendPairToPairResponse:
         return f"SendPairToPairResponse(items={self.items})"
 
     class PairData:
-        def __init__(self, line_number, receptor, message_id, cost, send_date, message, status, status_description):
+        def __init__(self, line_number, receptor, message_id, cost, send_date, message,
+                     # status, status_description
+                     ):
             self.line_number = line_number
             self.receptor = receptor
             self.message_id = message_id
             self.cost = cost
             self.send_date = send_date
             self.message = message
-            self.status = status
-            self.status_description = status_description
+            # self.status = status
+            # self.status_description = status_description
 
         def __repr__(self):
             return (
                 f"PairData(line_number={self.line_number}, receptor={self.receptor}, message_id={self.message_id}, cost={self.cost}, "
-                f"send_date={self.send_date}, message={self.message}, status={self.status}, status_description={self.status_description})")
+                f"send_date={self.send_date}, message={self.message}, "
+                # f"status={self.status}, status_description={self.status_description}"
+                f")")
 
 
 class SendSingleResponse:
-    def __init__(self, receptor, line_number, cost, message_id, message, status, send_date, status_description):
+    def __init__(self, receptor, line_number, cost, message_id, message,
+                 # status,
+                 send_date
+                 # , status_description
+                 ):
         self.receptor = receptor
         self.line_number = line_number
         self.cost = cost
         self.message_id = message_id
         self.message = message
-        self.status = status
+        # self.status = status
         self.send_date = send_date
-        self.status_description = status_description
+        # self.status_description = status_description
 
     def __repr__(self):
         return (
             f"SendSingleResponse(receptor={self.receptor}, line_number={self.line_number}, cost={self.cost}, message_id={self.message_id}, "
-            f"message={self.message}, status={self.status}, send_date={self.send_date}, status_description={self.status_description})")
+            f"message={self.message}, "
+            # f"status={self.status}, "
+            f"send_date={self.send_date},"
+            # f" status_description={self.status_description}"
+            f")")
 
 
 class SendSingleSmsInput:

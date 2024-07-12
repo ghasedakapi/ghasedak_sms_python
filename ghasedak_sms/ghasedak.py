@@ -102,7 +102,7 @@ class Ghasedak:
 
     def send_otp_sms_old(self, command, cancellation_token=None):
         try:
-            response = requests.post(f"{self.url}SendOtpSMSOld", headers=self.headers, json=command.to_dict())
+            response = requests.post(f"{self.url}SendOtpWithParams", headers=self.headers, json=command.to_dict())
             # response.raise_for_status()
         except RequestException as ex:
             return ResponseDto(is_success=False, message=str(ex), status_code=response.status_code if response else 500)
