@@ -5,10 +5,10 @@ from ghasedak_sms.enums.message_id_type import MessageIdType
 from ghasedak_sms.ghasedak import Ghasedak
 
 # Replace 'your_api_key' with your actual API key
-api_key = 'b7ee4eace78744868fc38b1b7fa90caed21717d4d7bf2c9f483d8abce6c018e1'
-line = '210002100'
-recipient_phone_number1 = '09120581875'
-recipient_phone_number2 = '0999893290'
+api_key = 'your_api_key'
+line = '123xxxxxxx'
+recipient_phone_number1 = '09xxxxxxxxx'
+recipient_phone_number2 = '09xxxxxxxxx'
 
 ghasedak = Ghasedak(api_key)
 
