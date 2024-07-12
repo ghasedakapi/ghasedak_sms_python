@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: ghasedak_sms
-Version: 0.1.0
+Version: 1.0.0
 Summary: Python package for Ghasedak SMS API
 Home-page: sms.ghasedak.me
 Author: Ghasedak Developers Team
@@ -16,6 +16,7 @@ Classifier: Programming Language :: Python :: 3.10
 Classifier: Programming Language :: Python :: 3.11
 Requires-Python: >=3.6
 Description-Content-Type: text/markdown
+License-File: LICENSE
 Requires-Dist: requests
 
 
