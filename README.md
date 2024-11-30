@@ -58,7 +58,7 @@ response = sms_api.send_pair_to_pair_sms(ghasedak_sms.SendPairToPairInput(items=
                 send_date='')], udh=False))
 print(response)
 
-# Send OTP SMS (New Method):
+# Send OTP SMS (Old Method):
 oldotpcommand = ghasedak_sms.SendOldOtpInput(
         send_date='',
         receptors=[
